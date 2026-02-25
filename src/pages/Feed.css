@@ -1,0 +1,51 @@
+.feed-page {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.feed-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feed-heading {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.feed-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Filters */
+.feed-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+/* Count */
+.feed-count {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+}
+
+/* Feed grid — 2 columns for readability */
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .feed-grid {
+        grid-template-columns: 1fr;
+    }
+}

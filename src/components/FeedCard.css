@@ -1,0 +1,108 @@
+.feed-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feed-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.feed-badge {
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.feed-badge-green {
+    background: rgba(0, 255, 136, 0.12);
+    color: var(--green);
+}
+
+.feed-badge-blue {
+    background: rgba(96, 165, 250, 0.12);
+    color: #60a5fa;
+}
+
+.feed-badge-purple {
+    background: rgba(167, 139, 250, 0.12);
+    color: #a78bfa;
+}
+
+.feed-badge-orange {
+    background: rgba(251, 146, 60, 0.12);
+    color: #fb923c;
+}
+
+.feed-tag {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+.feed-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.feed-card:hover .feed-title {
+    color: var(--green);
+}
+
+.feed-summary {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.feed-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.feed-date {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.feed-read-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.feed-read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--green);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-body);
+}
+
+.feed-read-btn:hover {
+    gap: 8px;
+    color: var(--green-dim);
+}

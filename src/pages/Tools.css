@@ -1,0 +1,229 @@
+.tools-page {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.tools-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tools-heading {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.tools-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Search */
+.tools-search-wrap {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    pointer-events: none;
+}
+
+/* Filters */
+.tools-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-group-icon {
+    color: var(--text-dim);
+    flex-shrink: 0;
+}
+
+.filter-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pricing-group {
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.pill-free.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #000;
+}
+
+.pill-freemium.active {
+    background: #facc15;
+    border-color: #facc15;
+    color: #000;
+}
+
+.pill-paid.active {
+    background: #f87171;
+    border-color: #f87171;
+    color: #000;
+}
+
+/* Count */
+.tools-count {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+}
+
+.tools-count strong {
+    color: var(--green);
+}
+
+/* ── Carousels ── */
+.tools-carousels {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.category-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.category-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carousel-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-nav-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+    border-color: var(--green-border);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.1);
+}
+
+.nav-icon {
+    color: var(--green);
+    opacity: 0.7;
+}
+
+/* ── Smooth Horizontal Scroller ── */
+.carousel-track-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+    /* Space for hover expansion */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.carousel-track-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    padding-top: 4px;
+    /* Space for box-shadow/hover scale */
+    padding-bottom: 4px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 14px);
+    /* Show 3 cards on desktop */
+    min-width: 280px;
+    /* Base size */
+    max-width: 360px;
+    scroll-snap-align: start;
+}
+
+/* Empty */
+.tools-empty {
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.empty-emoji {
+    font-size: 3rem;
+}
+
+.tools-empty h3 {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin: 4px 0;
+}
+
+.tools-empty p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .carousel-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel-item {
+        flex: 0 0 85%;
+        /* Shows 1 card + peeks the next one */
+    }
+}
