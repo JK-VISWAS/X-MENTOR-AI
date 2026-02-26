@@ -8,6 +8,7 @@ export const aiTools = [
         description: 'AI pair programmer that suggests code and entire functions directly inside your editor.',
         emoji: '🤖',
         url: 'https://github.com/features/copilot',
+        imagePath: '/images/tools/1.png'
     },
     {
         id: 2,

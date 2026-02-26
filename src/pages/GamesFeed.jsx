@@ -31,7 +31,8 @@ export default function GamesFeed() {
                             <ToolCard
                                 tool={{
                                     ...game,
-                                    pricing: game.difficulty // Hack: show difficulty in pricing badge slot
+                                    pricing: game.difficulty, // Hack: show difficulty in pricing badge slot
+                                    imagePath: `/images/games/${game.id}.jpg`
                                 }}
                             />
                         </div>

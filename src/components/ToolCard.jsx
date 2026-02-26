@@ -23,7 +23,9 @@ export default function ToolCard({ tool }) {
 
     // The space for the student to upload JPGs. 
     // They just need to place their images in `<project_root>/public/images/tools/1.jpg`, etc.
-    const imagePath = `/images/tools/${id}.jpg`
+    const imagePath = tool.imagePath || `/images/tools/${id}.jpg`
+    const imageName = imagePath.split('/').pop()
+    const fallbackFolder = window.location.pathname.includes('games') ? 'public/images/games' : 'public/images/tools'
 
     return (
         <div className="tool-card card">
@@ -43,7 +45,7 @@ export default function ToolCard({ tool }) {
                 {/* Placeholder shown if image is missing */}
                 <div className="tool-img-fallback">
                     <ImageIcon size={32} />
-                    <span>Upload {id}.jpg</span>
+                    <span style={{ fontSize: '0.8rem', textAlign: 'center' }}>Upload {imageName} <br /> to {fallbackFolder}</span>
                 </div>
 
                 {/* Badges layered over the image */}
